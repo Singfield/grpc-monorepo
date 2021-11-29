@@ -12,9 +12,9 @@ message Rocket {
 
 
 service RocketService {
-    rpc GetRocket(GetRocketRequest) returns (GetRocketReponse);
-    rpc InsertRocket (InsertRocketRequest) returns (InsertRocketResponse);
-    rpc DeleteRocket (DeleteRocketRequest) returns (DeleteRocketResponse);
+    rpc GetRocket(GetRocketRequest) returns (GetRocketResponse);
+    rpc InsertRocket(InsertRocketRequest) returns (InsertRocketResponse);
+    rpc DeleteRocket(DeleteRocketRequest) returns (DeleteRocketResponse);
 }
 
 // --Get Rocket Message Types --
@@ -22,7 +22,7 @@ message GetRocketRequest {
     string id = 1;
 }
 
-message GetRocketReponse {
+message GetRocketResponse {
     Rocket rocket = 1;
 }
 
@@ -37,13 +37,11 @@ message InsertRocketResponse {
     Rocket rocket =1;
 }
 
-// Delete Rocket Messages Types --
-
+// -- Delete Rocket Message Types --
 message DeleteRocketRequest {
-    Rocket rocket =1;
+    Rocket rocket = 1;
 }
 
-
 message DeleteRocketResponse {
-    string status =1;
+    string status = 1;
 }

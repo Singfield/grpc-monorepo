@@ -2,6 +2,12 @@ module github.com/singfield/grpc-monorepo
 
 go 1.17
 
+retract (
+	v0.0.0-20211129000648-ae70c68b47ff
+	v0.0.0-20211128233224-424015d10541
+
+)
+
 require (
 	google.golang.org/grpc v1.42.0
 	google.golang.org/protobuf v1.27.1
